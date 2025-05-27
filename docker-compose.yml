@@ -1,5 +1,3 @@
-version: "3"
-
 services:
 
   mysql:
@@ -10,7 +8,9 @@ services:
     ports:
       - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: mysql
-      MYSQL_DATABASE: mysql
-      MYSQL_USER: mysql
-      MYSQL_PASSWORD: mysql
+      MYSQL_ROOT_PASSWORD: sql_blog_audit
+      MYSQL_DATABASE: sql_blog_audit
+      MYSQL_USER: sql_blog_audit
+      MYSQL_PASSWORD: sql_blog_audit
+    volumes:
+      - ./sql/employee_audit.sql:/tmp/employee_audit.sql
